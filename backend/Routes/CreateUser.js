@@ -40,7 +40,7 @@ router.post("/loginuser",async(req,res)=>{
       }
       const pwdCompare=await bcrypt.compare(req.body.password,userData.password)
      if(!pwdCompare){
-        return res.status(400).json({ errors: "Try loggin with correct credential" });
+        return res.status(400).json({ errors: "Try loggin with correct credential wrong password" });
      }
      const data={
         user:{

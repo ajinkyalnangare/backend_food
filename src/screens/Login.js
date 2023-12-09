@@ -28,6 +28,7 @@ export default function Login() {
         alert("Enter valid credeintial")
     }
     if(json.success){
+      localStorage.setItem("userEmail",values.email);
       localStorage.setItem("authToken",json.authToken);
       console.log(localStorage.getItem("authToken"))
       navigate('/') 
