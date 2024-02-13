@@ -12,7 +12,7 @@ export default function Login() {
   }
   const onSubmit =async (values) => {
     const data= {email:values.email,password:values.password}
-    const response=await fetch("http://localhost:5000/api/loginuser",{
+    const response=await fetch("https://food-backend-abj9.onrender.com/api/loginuser",{
        method:'POST',
        headers:{
         'Content-Type':'application/json'
